@@ -1,0 +1,18 @@
+body {
+  background-image: url("image/weather=clear.png");
+  background-repeat: no-repeat; /* чтобы изображение не повторялось */
+  background-size: cover;
+  min-height: 100vh;
+  transition: background-image 1s ease;
+}
+.textP {
+  font-size: 7rem;
+}
+.shadow {
+  backdrop-filter: blur(3px);
+}
+@media (max-width: 1080px) {
+  .none{
+    display: none;
+  }
+}

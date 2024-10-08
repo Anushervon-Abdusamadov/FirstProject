@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar bg-transparent border-body" data-bs-theme="dark">
+        <img src="image/logo.svg" alt="Логотип" />
+        <div class="d-flex">
+          <input
+            id="city"
+            class="bg-transparent text-light form-control me-2"
+            type="search"
+            placeholder="Search Location..."
+            aria-label="Поиск"
+          />
+          <button class="btn btn-outline-light" id="search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div class="d-flex pt-5 justify-content-between flex-wrap">
+        <div class="row">
+          <div class="col">
+            <span class="text-light textP" id="tempetarura">...</span>
+          </div>
+          <div class="col">
+            <span class="text-light fs-1" id="Country">...</span> <br />
+            <span class="text-light fs-3" id="Name_City">...</span>
+            <span class="text-light fs-3" id="time">...</span>
+          </div>
+          <div class="col">
+            <img src="image/Cloudy.svg" class="" alt="" />
+          </div>
+        </div>
+        <div class="text-light shadow w-auto h-100 p-5 none">
+          <table class="table">
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Shower-Rain&Sun.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Shower Rain</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Sunny.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Clear Sky</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Broken-Cloudy.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Broken Clouds</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Scaterred-Clouds.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Scatered Clouds</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Few-Clouds.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Few Clouds</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Rain&Sun.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Rain</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Fog.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Mist</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Snow.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Show</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+            <tr>
+              <td class="bg-transparent text-light">
+                <img src="image/Thunderstorm.svg" alt="" />
+              </td>
+
+              <td class="bg-transparent text-light pe-5">
+                09:00
+                <br />
+                <span class="opacity-50">Thunderstorm</span>
+              </td>
+              <td class="bg-transparent text-light opacity-50 ps-5">19°</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="text-light shadow w-auto h-100 p-5 mt-5 ">
+        <p class="fs-5">Weather Details...</p>
+        <br />
+        <p class="fs-5">THUNDERSTORM WITH LIGHT DRIZZLE</p>
+        <br />
+        <table class="table">
+          <tr>
+            <td class="bg-transparent text-light opacity-50">Temp max</td>
+            <td class="bg-transparent text-light">
+              19° <img src="image/Vector.svg" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-transparent text-light opacity-50">Temp min</td>
+            <td class="bg-transparent text-light">
+              15° <img src="image/Vector1.svg" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-transparent text-light opacity-50">Humadity</td>
+            <td class="bg-transparent text-light">
+              58% <img src="image/outline.svg" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-transparent text-light opacity-50">Cloudy</td>
+            <td class="bg-transparent text-light">
+              86% <img src="image/outline1.svg" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-transparent text-light opacity-50">Wind</td>
+            <td class="bg-transparent text-light">
+              5km/h <img src="image/outline2.svg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="bootstrap.js/bootstrap.bundle.js"></script>
+    <script src="my js/script.js"></script>
+  </body>
+</html>
